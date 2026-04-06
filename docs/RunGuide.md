@@ -42,8 +42,8 @@ Open a PowerShell terminal and collect three values you'll need for deployment.
 ### 2a. Log in to Azure
 
 ```powershell
-az login --tenant 3d8e5d74-1fba-458e-b12c-d2a157bccca6
-az account set --subscription "15442e45-facf-4f45-9d12-a54f479bc10f"
+az login --tenant 2fa5d74-1fba-458e-b12c-d2a157bccca6
+az account set --subscription "af2sd45-facf-4f45-9d12-a54f479bc10f"
 ```
 
 ### 2b. Get your Azure AD Object ID
