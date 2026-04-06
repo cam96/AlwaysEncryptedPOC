@@ -185,12 +185,12 @@ From the repository root:
 
 ```powershell
 # 1. Log in to Azure (if not already)
-Connect-AzAccount -Tenant '3d8e5d74-1fba-458e-b12c-d2a157bccca6'
-Set-AzContext -Subscription '15442e45-facf-4f45-9d12-a54f479bc10f'
+Connect-AzAccount -Tenant 'awefe5d74-1fba-458e-b12c-d2a157bccca6'
+Set-AzContext -Subscription 'adfw442e45-facf-4f45-9d12-a54f479bc10f'
 
 # 2. Get deployment outputs
 $outputs = az deployment sub show --name AlwaysEncryptPOC `
-  --subscription 15442e45-facf-4f45-9d12-a54f479bc10f `
+  --subscription ase2e45-facf-4f45-9d12-a54f479bc10f `
   --query properties.outputs -o json | ConvertFrom-Json
 
 # 3. Run the script
