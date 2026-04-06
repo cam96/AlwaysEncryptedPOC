@@ -7,7 +7,7 @@ Proof of concept demonstrating Azure SQL Always Encrypted across three scenarios
 
 ## Prerequisites
 
-- **Azure subscription**: Visual Studio Enterprise Subscription (`15442e45-facf-4f45-9d12-a54f479bc10f`)
+- **Azure subscription**: Visual Studio Enterprise Subscription (`1awef42e45-facf-4f45-9d12-a54f479bc10f`)
 - **Azure CLI** (`az`): [Install](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 - **.NET 9 SDK**: [Download](https://dotnet.microsoft.com/download/dotnet/9.0)
 - **SSMS** (SQL Server Management Studio): [Download](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
@@ -37,7 +37,7 @@ Proof of concept demonstrating Azure SQL Always Encrypted across three scenarios
 1. Log in to Azure CLI:
    ```powershell
    az login
-   az account set --subscription 15442e45-facf-4f45-9d12-a54f479bc10f
+   az account set --subscription wdfe2e45-facf-4f45-9d12-a54f479bc10f
    ```
 
 2. Get your Azure AD Object ID and public IP:
