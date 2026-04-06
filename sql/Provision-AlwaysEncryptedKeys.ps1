@@ -45,12 +45,11 @@
 
 [CmdletBinding()]
 param(
-    [string]$SqlServerFqdn = 'sql-ae-poc-xc4oppbqazkry.database.windows.net',
-
-    [string]$CmkNoEnclaveKeyUri = 'https://kv-ae-poc-xc4oppbqazkry.vault.azure.net/keys/CMK-NoEnclave',
-
-    [string]$CmkWithEnclaveKeyUri = 'https://kv-ae-poc-xc4oppbqazkry.vault.azure.net/keys/CMK-WithEnclave',
-
+    [string]$SqlServerFqdn = 'db.database.windows.net',
+    [string]$TenantId = 'tenantid',
+    [string]$CmkNoEnclaveKeyUri = 'https://akv.vault.azure.net/keys/CMK-NoEnclave',
+    [string]$CmkWithEnclaveKeyUri = 'https://akv.vault.azure.net/keys/CMK-WithEnclave',
+    [string]$Subscription = 'subscriptionid',
     [string]$DatabaseName = 'AlwaysEncryptPocDb'
 )
 
@@ -73,8 +72,8 @@ foreach ($moduleName in @('SqlServer', 'Az.Accounts')) {
 $azContext = Get-AzContext
 if (-not $azContext) {
     Write-Host 'No Azure context found. Launching interactive login...'
-    Connect-AzAccount -Tenant '3d8e5d74-1fba-458e-b12c-d2a157bccca6'
-    Set-AzContext -Subscription '15442e45-facf-4f45-9d12-a54f479bc10f'
+    Connect-AzAccount -Tenant $TenantId
+    Set-AzContext -Subscription $Subscription
 }
 
 # ── 3. Connect to the database & obtain tokens ───────────────────────────────
