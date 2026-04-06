@@ -3,7 +3,7 @@
 ## TL;DR
 Build Bicep IaC + .NET 10 console app + SQL scripts to demonstrate Azure SQL Always Encrypted across three scenarios: no encryption, encryption without enclaves, and encryption with VBS enclaves. Bicep provisions all Azure infrastructure (Key Vault with RSA 4096 keys, SQL Server with VBS enclave database, RBAC role assignments). The POC proves that rich computations (SUBSTRING) and data movement behave differently depending on enclave availability.
 
-**Subscription**: Visual Studio Enterprise Subscription (`15442e45-facf-4f45-9d12-a54f479bc10f`)
+**Subscription**: Visual Studio Enterprise Subscription (`asdf45-facf-4f45-9d12-a54f479bc10f`)
 
 ---
 
@@ -225,8 +225,8 @@ az deployment sub create \
 
 | Identity | Resource | Role / Permission | Purpose |
 |---|---|---|---|
-| Developer (principalId) | Key Vault | **Key Vault Crypto Officer** (`14b46e9e-c2b7-41b4-b07b-48a6ebf60603`) | SSMS provisioning: create CMK/CEK, sign enclave computation signature |
-| Developer (principalId) | Key Vault | **Key Vault Crypto User** (`12338af0-0e69-4776-bea7-57ae8d297424`) | Console app runtime: unwrapKey/wrapKey for AE decrypt/encrypt CEK |
+| Developer (principalId) | Key Vault | **Key Vault Crypto Officer** (`awefb46e9e-c2b7-41b4-b07b-48a6ebf60603`) | SSMS provisioning: create CMK/CEK, sign enclave computation signature |
+| Developer (principalId) | Key Vault | **Key Vault Crypto User** (`wefs8af0-0e69-4776-bea7-57ae8d297424`) | Console app runtime: unwrapKey/wrapKey for AE decrypt/encrypt CEK |
 | Developer (principalId) | SQL Server | **Azure AD Admin** (set in Bicep `administrators` block) | Full database access — DDL, DML, SP execution. Implicitly `db_owner`. |
 | Developer (principalId) | Subscription | **Contributor** (pre-existing) | Deploy Bicep infrastructure |
 
