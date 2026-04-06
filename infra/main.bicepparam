@@ -24,7 +24,7 @@ param location = 'canadacentral'
 param principalId = 'a34893b5-8738-4c9a-81dd-399e1dd18708'
 
 // TODO: Replace with your display name or UPN (run: az ad signed-in-user show --query userPrincipalName -o tsv)
-param principalName = 'cameronmckay_allblueenterprises.onmicrosoft.com#EXT#@cameron0960gmail.onmicrosoft.com'
+param principalName = 'email'
 
 // TODO: Replace with your public IP address (run: (Invoke-WebRequest -Uri https://api.ipify.org).Content)
-param clientIpAddress = '24.78.144.164'
+param clientIpAddress = '203.0.113.42'
