@@ -21,7 +21,7 @@ using './main.bicep'
 param location = 'canadacentral'
 
 // TODO: Replace with your Azure AD Object ID (run: az ad signed-in-user show --query id -o tsv)
-param principalId = 'a34893b5-8738-4c9a-81dd-399e1dd18708'
+param principalId = 'aawef93b5-8738-4c9a-81dd-399e1dd18708'
 
 // TODO: Replace with your display name or UPN (run: az ad signed-in-user show --query userPrincipalName -o tsv)
 param principalName = 'email'
